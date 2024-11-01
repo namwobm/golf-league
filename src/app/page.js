@@ -1,11 +1,14 @@
-'use client';
+'use client'
 
-import GolfLeagueApp from '../components/GolfLeagueApp';
+import dynamic from 'next/dynamic'
+
+// Remove the dynamic import and import directly
+import GolfLeagueApp from '../components/GolfLeagueApp'
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4">
+    <div className="min-h-screen">
       <GolfLeagueApp />
-    </main>
-  );
+    </div>
+  )
 }

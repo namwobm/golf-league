@@ -28,39 +28,6 @@ import {
   Input
 } from '@/components/ui'
 
-// Component definitions
-const Card = ({ children, className = '' }) => (
-  <div className={`bg-white rounded-lg shadow ${className}`}>{children}</div>
-)
-
-const CardHeader = ({ children }) => (
-  <div className="p-6">{children}</div>
-)
-
-const CardTitle = ({ children }) => (
-  <h2 className="text-2xl font-bold text-black">{children}</h2>
-)
-
-const CardContent = ({ children }) => (
-  <div className="p-6 pt-0">{children}</div>
-)
-
-const Button = ({ children, className = '', ...props }) => (
-  <button 
-    className={`px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
-    {...props}
-  >
-    {children}
-  </button>
-)
-
-const Input = ({ className = '', ...props }) => (
-  <input 
-    className={`w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-black ${className}`}
-    {...props}
-  />
-)
-
 function GolfLeagueApp() {
   // State declarations
   const [mounted, setMounted] = useState(false)
@@ -137,6 +104,7 @@ function GolfLeagueApp() {
       setSeasonEnded(true)
     }
   }, [currentWeek])
+
   // Utility functions
   const calculateStablefordPoints = (scores) => {
     return scores.reduce((total, score, index) => {
@@ -176,7 +144,7 @@ function GolfLeagueApp() {
   const addPlayer = () => {
     if (newPlayerName && newPlayerHandicap) {
       const newPlayer = {
-        id: Date.now(), // Using timestamp as unique ID
+        id: Date.now(),
         name: newPlayerName,
         handicap: parseFloat(newPlayerHandicap),
         scores: {},
@@ -452,7 +420,7 @@ function GolfLeagueApp() {
             </CardHeader>
             <CardContent>
               <table className="w-full border-collapse">
-                <thead>
+              <thead>
                   <tr>
                     <th className="text-left p-2 border-b border-gray-200 bg-gray-50 text-black">Player</th>
                     <th className="text-left p-2 border-b border-gray-200 bg-gray-50 text-black">Handicap</th>
@@ -471,9 +439,9 @@ function GolfLeagueApp() {
                       <td className="p-2 border-b border-gray-200">
                         <Button
                           onClick={() => {
-                            setSelectedPlayer(player)
-                            setCurrentScores(player.scores?.[currentWeek] || Array(9).fill(''))
-                            setShowScoreEntry(true)
+                            setSelectedPlayer(player);
+                            setCurrentScores(player.scores?.[currentWeek] || Array(9).fill(''));
+                            setShowScoreEntry(true);
                           }}
                         >
                           Enter Scores

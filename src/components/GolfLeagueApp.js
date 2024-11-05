@@ -2,31 +2,26 @@
 
 import React, { useState, useEffect } from 'react'
 import { 
-  Download, 
-  Upload, 
-  Printer, 
-  Mail, 
-  ChevronLeft, 
-  ChevronRight, 
-  LineChart as LineChartIcon 
+ Download, 
+ Upload, 
+ Printer, 
+ Mail, 
+ ChevronLeft, 
+ ChevronRight, 
+ LineChart as LineChartIcon 
 } from 'lucide-react'
 import { 
-  LineChart, 
-  Line, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer 
+ LineChart, 
+ Line, 
+ XAxis, 
+ YAxis, 
+ CartesianGrid, 
+ Tooltip, 
+ ResponsiveContainer 
 } from 'recharts'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  Button,
-  Input
-} from './ui'
+import { Button } from './ui/button'
+import { Card, CardHeader, CardTitle, CardContent } from './ui/card'
+import { Input } from './ui/input'
 
 function GolfLeagueApp() {
   // State declarations

@@ -26,7 +26,7 @@ import {
   CardContent,
   Button,
   Input
-} from './ui'
+} from '@/components/ui'
 
 // Component definitions
 const Card = ({ children, className = '' }) => (

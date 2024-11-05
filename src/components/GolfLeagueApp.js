@@ -19,6 +19,14 @@ import {
   Tooltip, 
   ResponsiveContainer 
 } from 'recharts'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  Button,
+  Input
+} from './ui'
 
 // Component definitions
 const Card = ({ children, className = '' }) => (

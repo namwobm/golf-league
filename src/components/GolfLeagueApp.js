@@ -26,7 +26,7 @@ import {
   CardContent,
   Button,
   Input
-} from '../ui'
+} from './ui/index'
 
 function GolfLeagueApp() {
   // State declarations
